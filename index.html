@@ -3,120 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REIGNS — A Private Gallery of Built Websites</title>
-  <meta name="description" content="A private gallery of websites built by one pair of hands. Choose a room, visit the works — every piece opens live in its own tab." />
+  <title>Suleiman Sallah — A Private Gallery of Built Websites</title>
+  <meta name="description" content="A private gallery of websites built by Suleiman Sallah. Walk the promenade, step closer to a work, and step inside: every piece opens live in its own tab." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>◆</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%23C8A24B'>◆</text></svg>" />
+  <noscript><style>.loader{display:none}</style></noscript>
 </head>
 <body>
 
+  <!-- the wall itself: a fixed color field so sections can dissolve between night and study -->
+  <div class="field" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- the flashlight and the ring cursor (desktop, fine pointer only) -->
+  <div class="torch" data-torch aria-hidden="true"></div>
+  <div class="ring" data-ring aria-hidden="true"><span data-ring-label>View</span></div>
+
+  <!-- lights warming up -->
+  <div class="loader" data-loader aria-hidden="true">
+    <p class="loader-word" data-loader-word>Suleiman&nbsp;Sallah</p>
+    <span class="loader-rule" data-loader-rule></span>
+  </div>
+
   <a class="skip" href="#collection">Skip to the collection</a>
 
-  <header class="masthead">
+  <header class="masthead" data-masthead>
     <a class="wordmark" href="#top" aria-label="Suleiman Sallah — Portfolio">
-      <span class="wordmark-name">Suleiman Sallah</span>
+      <span class="wordmark-name">Suleiman&nbsp;Sallah</span>
       <span class="wordmark-tag">Portfolio</span>
     </a>
     <nav class="masthead-nav" aria-label="Main">
-      <a href="#collection">Collection</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#maker">The Maker</a>
-      <a class="masthead-cta" href="#commission">Commission</a>
+      <a class="magnetic" href="#collection" data-cursor="Enter">Collection</a>
+      <a class="magnetic" href="#rooms" data-cursor="Enter">Rooms</a>
+      <a class="magnetic" href="#maker" data-cursor="Enter">The Maker</a>
+      <a class="magnetic masthead-cta" href="#commission" data-cursor="Enquire">Commission</a>
     </nav>
   </header>
 
   <main id="top">
 
-    <!-- ======================= HERO ======================= -->
-    <section class="hero" aria-label="Welcome">
-      <p class="eyebrow hero-eyebrow">
+    <!-- ================= THE ENTRANCE ================= -->
+    <section class="hero" aria-label="The entrance">
+      <p class="eyebrow hero-eyebrow" data-intro>
         <span class="rule" aria-hidden="true"></span>
         <span>A private collection · Est. <span data-established>MMXXVI</span></span>
       </p>
       <h1 class="hero-title">
-        <span class="line"><span>Welcome to my</span></span>
-        <span class="line"><span>website</span> <em>collection.</em></span>
+        <span class="line"><span data-line>Welcome to my</span></span>
+        <span class="line"><span data-line>website <em>collection.</em></span></span>
       </h1>
-      <div class="hero-foot">
-        <p class="hero-note">
-          Every piece in this gallery is a living website, built by one pair
-          of hands. Choose a room, approach a work, and step inside — each
-          one opens in its own tab, exactly as its visitors experience it.
-        </p>
-        <dl class="hero-index" aria-label="Gallery index">
-          <div class="hero-index-row"><dt>Works on display</dt><dd data-count>10</dd></div>
-          <div class="hero-index-row"><dt>Rooms</dt><dd data-rooms-count>6</dd></div>
-          <div class="hero-index-row"><dt>Established</dt><dd data-established>MMXXVI</dd></div>
-          <div class="hero-index-row"><dt>Viewing</dt><dd>By appointment</dd></div>
-        </dl>
-      </div>
+      <p class="hero-note" data-intro>
+        Every piece in this gallery is a living website, built by one pair of
+        hands. Walk the promenade, step closer to a work, and step inside:
+        each one opens in its own tab, exactly as its visitors experience it.
+      </p>
+      <dl class="wall-text" data-intro aria-label="Gallery index">
+        <div class="wall-row"><dt>Works on display</dt><dd><span data-count data-countup>3</span></dd></div>
+        <div class="wall-row"><dt>Rooms</dt><dd><span data-rooms-count data-countup>7</span></dd></div>
+        <div class="wall-row"><dt>Established</dt><dd data-established>MMXXVI</dd></div>
+        <div class="wall-row"><dt>Viewing</dt><dd>By appointment</dd></div>
+      </dl>
+      <p class="hero-hint" data-intro aria-hidden="true">Walk the promenade<span class="hero-hint-arrow">↓</span></p>
     </section>
 
-    <!-- ======================= ROOMS ======================= -->
-    <nav class="rooms" id="rooms" aria-label="Rooms of the gallery">
-      <div class="rooms-inner" data-rooms role="group" aria-label="Filter works by room">
-        <!-- room buttons rendered by app.js -->
+    <!-- ================= THE COLLECTION — the promenade ================= -->
+    <section class="promenade" id="collection" aria-label="The collection" data-promenade>
+      <div class="promenade-head">
+        <p class="eyebrow">
+          <span class="rule" aria-hidden="true"></span>
+          <span>The collection · <span data-room-label>All works</span></span>
+        </p>
+        <div class="promenade-progress" aria-hidden="true">
+          <span class="progress-count"><span data-progress-now>01</span>&nbsp;/&nbsp;<span data-progress-total>03</span></span>
+          <span class="progress-rule"><i data-progress-fill></i></span>
+        </div>
       </div>
-    </nav>
-
-    <!-- ===================== COLLECTION ===================== -->
-    <section class="collection" id="collection" aria-label="The collection">
-      <div class="collection-grid" data-grid aria-live="polite">
-        <!-- works rendered by app.js -->
+      <div class="promenade-viewport" data-viewport>
+        <div class="promenade-track" data-track>
+          <!-- works hung by app.js -->
+        </div>
       </div>
-      <p class="collection-empty" data-empty hidden>
-        This room is being rehung. New works arrive soon —
+      <p class="promenade-empty" data-empty hidden>
+        This wing is being rehung. New works arrive soon —
         <button class="linklike" data-back-to-all type="button">return to all works</button>.
       </p>
     </section>
 
-    <!-- ====================== THE MAKER ====================== -->
-    <section class="maker" id="maker" aria-label="About the maker">
-      <p class="eyebrow"><span class="rule" aria-hidden="true"></span>The maker</p>
-      <div class="maker-body">
-        <h2 class="maker-title">Built by <em data-owner>Benedicta Reigns</em></h2>
-        <p class="maker-note">
-          Designer and builder of every work in these rooms — from first
-          sketch to live deployment. Each commission is treated as a piece
-          for the collection: made once, made properly, made to be visited.
-        </p>
+    <!-- ================= THE WINGS — rooms index ================= -->
+    <section class="wings" id="rooms" aria-label="The wings of the gallery">
+      <p class="eyebrow">
+        <span class="rule" aria-hidden="true"></span>
+        <span>The wings</span>
+      </p>
+      <div class="wings-list" data-wings role="group" aria-label="Browse works by wing">
+        <!-- wing rows rendered by app.js -->
+      </div>
+    </section>
+    <img class="wing-preview" data-wing-preview alt="" aria-hidden="true" />
+
+    <!-- ================= THE MAKER — the lit study ================= -->
+    <section class="study" id="maker" aria-label="About the maker">
+      <div class="study-grid">
+        <figure class="study-plate" data-reveal>
+          <div class="study-plate-frame" aria-hidden="true">
+            <span class="study-monogram">S<i>.</i></span>
+          </div>
+          <figcaption class="study-caption">The maker · at work · <span data-established>MMXXVI</span></figcaption>
+        </figure>
+        <div class="study-text">
+          <p class="eyebrow eyebrow--study" data-reveal>
+            <span class="rule" aria-hidden="true"></span>
+            <span>The maker</span>
+          </p>
+          <h2 class="study-title" data-reveal>Built by <em data-owner>Suleiman Sallah</em></h2>
+          <p class="study-body" data-reveal>
+            Designer and builder of every work in these rooms, from first
+            sketch to live deployment. Each commission is treated as a piece
+            for the collection: made once, made properly, made to be visited.
+          </p>
+          <p class="study-body" data-reveal>
+            The gallery is small on purpose. Every piece hangs here because it
+            earned its wall.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== COMMISSION ===================== -->
+    <!-- ================= COMMISSION — the finale ================= -->
     <section class="commission" id="commission" aria-label="Commission a website">
+      <p class="commission-scarcity" data-reveal>The gallery accepts a limited number of commissions</p>
       <h2 class="commission-title">
-        <span class="line"><span>Seen something</span></span>
-        <span class="line"><em>you'd live in?</em></span>
+        <span class="line"><span data-line>Seen something</span></span>
+        <span class="line"><span data-line><em>you'd live in?</em></span></span>
       </h2>
-      <p class="commission-note">
-        The gallery accepts a limited number of commissions.
-        Write with a few lines about what you're building.
-      </p>
-      <div class="commission-actions">
-        <a class="commission-cta" data-mailto href="#">
-          Commission a piece
-          <span class="commission-cta-arrow" aria-hidden="true">&#8599;</span>
-        </a>
-        <p class="commission-direct">
-          Or write directly —
-          <a data-mailto data-email-text href="#">email</a>
-        </p>
+      <div class="commission-actions" data-reveal>
+        <a class="commission-cta magnetic" data-mailto data-cursor="Enquire" href="#">Commission a piece</a>
+        <a class="commission-email" data-mailto data-email-text data-cursor="Write" href="#">email</a>
       </div>
     </section>
 
   </main>
 
-  <footer class="colophon">
-    <p>© <span data-year></span> <span data-owner>Benedicta Reigns</span></p>
-    <p class="colophon-mark" aria-hidden="true">◆</p>
-    <p><span data-gallery-name>REIGNS</span> — <span data-tagline>a private gallery of built websites</span></p>
+  <!-- ================= THE CLOSING WALL ================= -->
+  <footer class="closing">
+    <div class="closing-map">
+      <nav class="closing-links" aria-label="Footer">
+        <a href="#collection">Collection</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#maker">The Maker</a>
+        <a href="#commission">Commission</a>
+      </nav>
+      <p class="closing-mark" aria-hidden="true">◆</p>
+      <p class="closing-legal">© <span data-year></span> <span data-owner>Suleiman Sallah</span> · A private gallery of built websites</p>
+    </div>
+    <p class="closing-name" aria-hidden="true">Suleiman&nbsp;Sallah</p>
   </footer>
 
-  <script src="js/works.js"></script>
-  <script src="js/app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script defer src="js/works.js"></script>
+  <script defer src="js/app.js"></script>
 </body>
 </html>
