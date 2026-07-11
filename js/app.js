@@ -38,10 +38,7 @@
   });
   text("[data-email-text]", GALLERY.email);
 
-  var occupiedRooms = ROOMS.filter(function (r) {
-    return r.id !== "all" && WORKS.some(function (w) { return w.room === r.id; });
-  });
-  text("[data-rooms-count]", String(occupiedRooms.length));
+  text("[data-rooms-count]", String(ROOMS.length - 1));
 
   /* ---------- helpers ---------- */
 
@@ -71,7 +68,6 @@
 
   ROOMS.forEach(function (room) {
     var count = tally(room.id);
-    if (room.id !== "all" && count === 0) return; // hide empty rooms
 
     var btn = document.createElement("button");
     btn.type = "button";

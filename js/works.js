@@ -22,13 +22,14 @@ const GALLERY = {
    `hue` is the room's signature color — it tints that room's dot,
    underline, and hover accents. */
 const ROOMS = [
-  { id: "all",       numeral: "",    label: "All Works",     hue: "#2b3fe6" },
-  { id: "ecommerce", numeral: "I",   label: "E-Commerce",    hue: "#e8501f" },
-  { id: "saas",      numeral: "II",  label: "SaaS",          hue: "#2b3fe6" },
-  { id: "startup",   numeral: "III", label: "Startup",       hue: "#0e9f6e" },
-  { id: "landing",   numeral: "IV",  label: "Landing Pages", hue: "#de9b00" },
-  { id: "portfolio", numeral: "V",   label: "Portfolio",     hue: "#d63a6b" },
-  { id: "agency",    numeral: "VI",  label: "Agency",        hue: "#0e8c9c" },
+  { id: "all",          numeral: "",     label: "All Works",     hue: "#2b3fe6" },
+  { id: "ecommerce",    numeral: "I",    label: "E-Commerce",    hue: "#e8501f" },
+  { id: "saas",         numeral: "II",   label: "SaaS",          hue: "#2b3fe6" },
+  { id: "startup",      numeral: "III",  label: "Startup",       hue: "#0e9f6e" },
+  { id: "landing",      numeral: "IV",   label: "Landing Pages", hue: "#de9b00" },
+  { id: "portfolio",    numeral: "V",    label: "Portfolio",     hue: "#d63a6b" },
+  { id: "agency",       numeral: "VI",   label: "Agency",        hue: "#0e8c9c" },
+  { id: "architecture", numeral: "VII",  label: "Architecture",  hue: "#6d5b8a" },
 ];
 
 /* =============================================================
