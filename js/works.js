@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Maison Aurèle",
+    url: "https://maison-aurele-six.vercel.app/",
+    year: 2026,
+    medium: "Grasse perfume maison, composed by hand",
+    image: "shots/maison-aurele.jpg",
+    ink: ["#f0e0c8", "#b8863f"],
+  },
+  {
     title: "Lumière",
     url: "https://lumiere-delta-ashy.vercel.app/",
     year: 2026,
