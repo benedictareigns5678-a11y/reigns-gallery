@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Aurelia Interior Studio",
+    url: "https://aurelia-interior-studio.vercel.app/",
+    year: 2026,
+    medium: "Bespoke interiors, concept to completion",
+    image: "shots/aurelia-interior.jpg",
+    ink: ["#f2ece4", "#b9a894"],
+  },
+  {
     title: "Maison Aurèle",
     url: "https://maison-aurele-six.vercel.app/",
     year: 2026,
