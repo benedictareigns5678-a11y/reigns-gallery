@@ -475,7 +475,10 @@ body.has-torch .ring { display: flex; }
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: brightness(0.85) saturate(0.8) sepia(0.06);
+  /* Unlit, not darkened. Lowering contrast lifts blacks off the wall so a
+     dark screenshot still reads as a picture; multiplying brightness alone
+     would sink it into the viridian and leave an empty frame. */
+  filter: brightness(0.94) contrast(0.8) saturate(0.78) sepia(0.05);
   transition: filter 0.6s var(--ease), transform 1s var(--ease);
   will-change: transform;
 }
@@ -484,7 +487,7 @@ body.has-torch .ring { display: flex; }
 .piece-link:focus-visible .piece-media img,
 .piece-link:hover .piece-media video,
 .piece-link:focus-visible .piece-media video {
-  filter: brightness(1) saturate(1) sepia(0);
+  filter: brightness(1) contrast(1) saturate(1) sepia(0);
   transform: scale(1.03);
 }
 
@@ -597,89 +600,6 @@ body.has-torch .ring { display: flex; }
   color: var(--bone-dim);
   max-width: 40rem;
 }
-
-/* ---------- the wings ---------- */
-
-.wings { padding: clamp(6rem, 14vh, 10rem) var(--gutter); }
-
-.wings-list { margin-top: clamp(2.5rem, 5vh, 4rem); }
-
-.wing-row {
-  width: 100%;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 2rem;
-  background: none;
-  border: none;
-  border-top: 1px solid var(--brass-line);
-  padding: clamp(1.6rem, 3.4vh, 2.6rem) 0.25rem;
-  cursor: pointer;
-  text-align: left;
-  transition: transform 0.35s var(--ease);
-}
-
-.wing-row:last-child { border-bottom: 1px solid var(--brass-line); }
-
-.wing-name {
-  display: flex;
-  align-items: baseline;
-  gap: 1.4rem;
-  font-family: var(--display);
-  font-weight: 340;
-  font-size: clamp(2rem, 4.6vw, 4.4rem);
-  letter-spacing: -0.015em;
-  line-height: 1;
-  color: var(--bone);
-  transition: color 0.35s var(--ease);
-}
-
-.wing-numeral {
-  font-family: var(--plaque);
-  font-size: 0.66rem;
-  letter-spacing: 0.14em;
-  color: var(--oxblood);
-  background: var(--bone);
-  padding: 0.3em 0.6em;
-  transform: translateY(-0.5em);
-}
-
-.wing-count {
-  font-family: var(--plaque);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--bone-dim);
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  transition: color 0.35s var(--ease);
-}
-
-.wing-row:hover,
-.wing-row[aria-pressed="true"] { transform: translateX(12px); }
-
-.wing-row:hover .wing-name,
-.wing-row[aria-pressed="true"] .wing-name { color: var(--candle); }
-
-.wing-row:hover .wing-count { color: var(--candle); }
-
-.wing-preview {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 40;
-  width: min(300px, 30vw);
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border: 1px solid var(--brass-line);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s var(--ease);
-  will-change: transform;
-  filter: brightness(0.92) sepia(0.08);
-}
-
-.wing-preview.is-on { opacity: 1; }
 
 /* ---------- the maker: the lit study ---------- */
 
@@ -894,8 +814,6 @@ body.has-torch .ring { display: flex; }
 
   .study-grid { grid-template-columns: 1fr; }
   .study-plate { position: static; max-width: 22rem; }
-
-  .wing-preview { display: none; }
 }
 
 @media (max-width: 560px) {

@@ -1,59 +1,60 @@
-# REIGNS — Your Private Gallery
+# Suleiman Sallah — A Private Gallery of Built Websites
 
-A luxury gallery website for showing clients the websites you've built.
-Clients pick a room (category), browse the works, and click any piece to
-open the live website in a new tab.
+A gallery site for showing clients the websites you've built. Visitors walk
+the promenade past every piece and click any one to open the live website in
+a new tab.
 
-**The 10 works currently inside are EXAMPLES** so you can see the gallery
-alive. Replace them with your real websites.
+Live at <https://reigns-gallery.vercel.app>
+
+There are no categories. Everything hangs in one collection, newest first.
 
 ---
 
 ## The only file you edit: `js/works.js`
 
-### Change your name / gallery name / email
+### Change your name or email
 At the top of `js/works.js`, edit the `GALLERY` block.
 
 ### Add one of your websites
-Copy this block and paste it at the **top** of the `WORKS` list:
+Copy this block and paste it at the **top** of the `WORKS` list. The piece at
+the top is the one marked "Currently hanging".
 
 ```js
 {
   title: "My Client's Site",
   url: "https://the-live-website.com",
-  room: "ecommerce",            // ecommerce, saas, startup, landing, portfolio, agency
   year: 2026,
   medium: "One short line about it",
-  image: null,                  // or "shots/my-screenshot.jpg"
-  ink: ["#3A2547", "#C9A96A"],  // poster colors (only used while image is null)
+  image: "shots/my-screenshot.jpg",   // or null
+  ink: ["#e7e2d8", "#8a7f6b"],        // plate colors, used only while image is null
 },
 ```
 
-### Add a real screenshot (recommended)
-1. Open the live website, take a wide screenshot (roughly 1600×1000 px).
+### Add a screenshot
+1. Take a wide screenshot of the live site, roughly 1600×1000 px.
 2. Save it into the `shots/` folder, e.g. `shots/aurelia.jpg`.
-3. On that work's entry, set `image: "shots/aurelia.jpg"`.
+3. Set `image: "shots/aurelia.jpg"` on that work.
 
-Until a work has a screenshot, the gallery paints an elegant poster for it
-automatically — nothing ever looks broken.
+Until a work has a screenshot, the gallery paints an elegant plate for it, so
+nothing ever looks broken. Acquisition numbers, the progress counter and the
+"works on display" figure all update by themselves.
 
-### Remove the example works
-Delete their blocks from the `WORKS` list. The room counts, numbering and
-"works on display" counter all update by themselves. Rooms with zero works
-hide themselves automatically.
+### Optional: a moving preview
+Record a short, muted scrolling capture of the site as an `.mp4` (keep it
+under about 3 MB), put it in `shots/`, and add `preview: "shots/name.mp4"` to
+that work. It plays when a visitor steps close to the piece.
 
 ---
 
-## Putting it online (free, ~2 minutes)
+## Publishing a change
 
-The site is pure HTML/CSS/JS — no build step, nothing to install.
+The site is pure HTML/CSS/JS, no build step. From this folder:
 
-**Easiest:** go to <https://app.netlify.com/drop> and drag the whole
-`reigns-gallery` folder onto the page. You get a live link immediately;
-that link is what you send clients. (You can set a nicer name in Site
-settings, or connect your own domain later.)
+```bash
+git add -A && git commit -m "Add new work" && git push && vercel deploy --prod --yes
+```
 
-Vercel, GitHub Pages or any static host works the same way.
+The public link never changes; it updates in place.
 
 ---
 
@@ -64,6 +65,9 @@ reigns-gallery/
 ├── index.html      the page (don't need to touch)
 ├── css/style.css   the design (don't need to touch)
 ├── js/app.js       the engine (don't need to touch)
-├── js/works.js     ← YOUR file: name, email, rooms, works
+├── js/works.js     ← YOUR file: name, email, works
 └── shots/          ← your screenshots go here
 ```
+
+`PRODUCT.md` and `DESIGN.md` record the design direction ("a private museum,
+after closing time") so any future work stays consistent with it.
