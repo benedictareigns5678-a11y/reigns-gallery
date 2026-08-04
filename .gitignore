@@ -3,3 +3,7 @@
 
 .vercel
 .env*
+
+# intermediate capture files; only the optimised .jpg belongs in the repo
+shots/*.png
+_qa.html
