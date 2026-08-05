@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Zapp",
+    url: "https://zapp-landing.vercel.app/",
+    year: 2026,
+    medium: "Small-batch energy drink, sold loud",
+    image: "shots/zapp.jpg",
+    ink: ["#f7f3e4", "#b4e600"],
+  },
+  {
     title: "Aurelia Interior Studio",
     url: "https://aurelia-interior-studio.vercel.app/",
     year: 2026,
