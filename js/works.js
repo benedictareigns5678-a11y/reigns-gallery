@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Nexus Esports",
+    url: "https://nexus-esports-kappa.vercel.app/",
+    year: 2026,
+    medium: "Esports tournaments, teams and rankings",
+    image: "shots/nexus-esports.jpg",
+    ink: ["#e6ddff", "#7c3aed"],
+  },
+  {
     title: "Pulp & Peel",
     url: "https://pulp-and-peel.vercel.app/",
     year: 2026,
