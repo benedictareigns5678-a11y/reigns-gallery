@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Pulp & Peel",
+    url: "https://pulp-and-peel.vercel.app/",
+    year: 2026,
+    medium: "Bowl bar, sourced weekly",
+    image: "shots/pulp-and-peel.jpg",
+    ink: ["#ffd6ea", "#c8106b"],
+  },
+  {
     title: "Zapp",
     url: "https://zapp-landing.vercel.app/",
     year: 2026,
