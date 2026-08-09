@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Nexora",
+    url: "https://nexora-hazel-two.vercel.app/",
+    year: 2026,
+    medium: "AI work management for teams",
+    image: "shots/nexora.jpg",
+    ink: ["#ded6ff", "#7c5cff"],
+  },
+  {
     title: "Nexus Esports",
     url: "https://nexus-esports-kappa.vercel.app/",
     year: 2026,
