@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Nova Pulse",
+    url: "https://nova-pulse-delta.vercel.app/",
+    year: 2026,
+    medium: "Running shoe product page",
+    image: "shots/nova-pulse.jpg",
+    ink: ["#eeece3", "#4d5a35"],
+  },
+  {
     title: "Nexora",
     url: "https://nexora-hazel-two.vercel.app/",
     year: 2026,
