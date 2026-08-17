@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Étoile",
+    url: "https://etoile-restaurant-tan.vercel.app/",
+    year: 2026,
+    medium: "Michelin-selection restaurant, tasting menu",
+    image: "shots/etoile.jpg",
+    ink: ["#efe9dc", "#8a6a4a"],
+  },
+  {
     title: "Nova Pulse",
     url: "https://nova-pulse-delta.vercel.app/",
     year: 2026,
