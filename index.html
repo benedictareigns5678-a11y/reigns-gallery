@@ -3,153 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suleiman Sallah — A Private Gallery of Built Websites</title>
-  <meta name="description" content="A private gallery of websites built by Suleiman Sallah. Walk the promenade, step closer to a work, and step inside: every piece opens live in its own tab." />
+  <title>Suleiman Sallah — Website Portfolio</title>
+  <meta name="description" content="A portfolio of live websites designed and built by Suleiman Sallah. Browse the work and open any site in its own tab." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%23C8A24B'>◆</text></svg>" />
-  <noscript><style>.loader{display:none}</style></noscript>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23222'/><text x='50' y='72' font-size='68' font-family='Arial' font-weight='bold' fill='%23fff' text-anchor='middle'>S</text></svg>" />
 </head>
 <body>
 
-  <!-- the wall itself: a fixed color field so sections can dissolve between night and study -->
-  <div class="field" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <a class="skip" href="#work">Skip to the work</a>
 
-  <!-- the flashlight and the ring cursor (desktop, fine pointer only) -->
-  <div class="torch" data-torch aria-hidden="true"></div>
-  <div class="ring" data-ring aria-hidden="true"><span data-ring-label>View</span></div>
-
-  <!-- lights warming up -->
-  <div class="loader" data-loader aria-hidden="true">
-    <p class="loader-word" data-loader-word>Suleiman&nbsp;Sallah</p>
-    <span class="loader-rule" data-loader-rule></span>
-  </div>
-
-  <a class="skip" href="#collection">Skip to the collection</a>
-
-  <header class="masthead" data-masthead>
-    <a class="wordmark" href="#top" aria-label="Suleiman Sallah — Portfolio">
-      <span class="wordmark-name">Suleiman&nbsp;Sallah</span>
-      <span class="wordmark-tag">Portfolio</span>
+  <!-- ===================== TOP BAR ===================== -->
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Suleiman Sallah, home">
+      Suleiman Sallah<span class="wordmark-dot">.</span>
     </a>
-    <nav class="masthead-nav" aria-label="Main">
-      <a class="magnetic" href="#collection" data-cursor="Enter">Collection</a>
-      <a class="magnetic" href="#maker" data-cursor="Enter">The Maker</a>
-      <a class="magnetic masthead-cta" href="#commission" data-cursor="Enquire">Commission</a>
+
+    <nav class="topnav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+
+    <div class="topbar-actions">
+      <span class="status" aria-label="Availability">
+        <span class="status-dot" aria-hidden="true"></span>Available for work
+      </span>
+      <a class="btn btn--solid" href="#contact">Start a project</a>
+    </div>
   </header>
 
   <main id="top">
 
-    <!-- ================= THE ENTRANCE ================= -->
-    <section class="hero" aria-label="The entrance">
-      <p class="eyebrow hero-eyebrow" data-intro>
-        <span class="rule" aria-hidden="true"></span>
-        <span>A private collection · Est. <span data-established>MMXXVI</span></span>
+    <!-- ===================== FEATURED ===================== -->
+    <section class="featured" aria-label="Featured work">
+      <p class="featured-meta">
+        <span>Latest Work</span>
+        <span class="chip" data-featured-date>2026</span>
+        <span><b data-count>11</b> sites live</span>
       </p>
-      <h1 class="hero-title">
-        <span class="line"><span data-line>Welcome to my</span></span>
-        <span class="line"><span data-line>website <em>collection.</em></span></span>
-      </h1>
-      <p class="hero-note" data-intro>
-        Every piece in this gallery is a living website, built by one pair of
-        hands. Walk the promenade, step closer to a work, and step inside:
-        each one opens in its own tab, exactly as its visitors experience it.
-      </p>
-      <dl class="wall-text" data-intro aria-label="Gallery index">
-        <div class="wall-row"><dt>Works on display</dt><dd><span data-count data-countup>3</span></dd></div>
-        <div class="wall-row"><dt>Established</dt><dd data-established>MMXXVI</dd></div>
-        <div class="wall-row"><dt>Admission</dt><dd>By invitation</dd></div>
-        <div class="wall-row"><dt>Viewing</dt><dd>By appointment</dd></div>
-      </dl>
-      <p class="hero-hint" data-intro aria-hidden="true">Walk the promenade<span class="hero-hint-arrow">↓</span></p>
+      <h1 class="featured-title" data-featured-title>Étoile</h1>
+      <p class="featured-by">by <a href="#about" data-owner>Suleiman Sallah</a></p>
+
+      <a class="featured-shot" data-featured-link href="#" target="_blank" rel="noopener">
+        <img data-featured-img alt="" />
+        <span class="featured-visit">Visit site <i aria-hidden="true">&#8599;</i></span>
+      </a>
     </section>
 
-    <!-- ================= THE COLLECTION — the promenade ================= -->
-    <section class="promenade" id="collection" aria-label="The collection" data-promenade>
-      <div class="promenade-head">
-        <p class="eyebrow">
-          <span class="rule" aria-hidden="true"></span>
-          <span>The collection · Walk the wall</span>
-        </p>
-        <div class="promenade-progress" aria-hidden="true">
-          <span class="progress-count"><span data-progress-now>01</span>&nbsp;/&nbsp;<span data-progress-total>03</span></span>
-          <span class="progress-rule"><i data-progress-fill></i></span>
-        </div>
+    <!-- ===================== THE GRID ===================== -->
+    <section class="collection" id="work" aria-label="All work">
+      <div class="collection-head">
+        <h2 class="collection-title">All Work</h2>
+        <p class="collection-count"><b data-count>11</b> sites &middot; every one live</p>
       </div>
-      <div class="promenade-viewport" data-viewport>
-        <div class="promenade-track" data-track>
-          <!-- works hung by app.js -->
-        </div>
+
+      <div class="grid" data-grid>
+        <!-- cards rendered by app.js -->
       </div>
-      <p class="promenade-empty" data-empty hidden>
-        The gallery is being rehung. New works arrive soon.
-      </p>
+
+      <p class="grid-empty" data-empty hidden>No sites published yet.</p>
     </section>
 
-    <!-- ================= THE MAKER — the lit study ================= -->
-    <section class="study" id="maker" aria-label="About the maker">
-      <div class="study-grid">
-        <figure class="study-plate" data-reveal>
-          <div class="study-plate-frame" aria-hidden="true">
-            <span class="study-monogram">S<i>.</i></span>
-          </div>
-          <figcaption class="study-caption">The maker · at work · <span data-established>MMXXVI</span></figcaption>
-        </figure>
-        <div class="study-text">
-          <p class="eyebrow eyebrow--study" data-reveal>
-            <span class="rule" aria-hidden="true"></span>
-            <span>The maker</span>
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about" aria-label="About">
+      <p class="section-tag">About</p>
+      <div class="about-body">
+        <h2 class="about-title">
+          I design and build websites end to end, from first sketch to live deployment.
+        </h2>
+        <div class="about-side">
+          <p>
+            Every site in this portfolio was made by one pair of hands: the
+            layout, the type, the motion, the code, the deploy. No templates.
           </p>
-          <h2 class="study-title" data-reveal>Built by <em data-owner>Suleiman Sallah</em></h2>
-          <p class="study-body" data-reveal>
-            Designer and builder of every work in these rooms, from first
-            sketch to live deployment. Each commission is treated as a piece
-            for the collection: made once, made properly, made to be visited.
-          </p>
-          <p class="study-body" data-reveal>
-            The gallery is small on purpose. Every piece hangs here because it
-            earned its wall.
-          </p>
+          <dl class="facts">
+            <div class="fact"><dt>Sites shipped</dt><dd data-count>11</dd></div>
+            <div class="fact"><dt>Based</dt><dd>Remote, worldwide</dd></div>
+            <div class="fact"><dt>Availability</dt><dd>Open for 2026</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- ================= COMMISSION — the finale ================= -->
-    <section class="commission" id="commission" aria-label="Commission a website">
-      <p class="commission-scarcity" data-reveal>The gallery accepts a limited number of commissions</p>
-      <h2 class="commission-title">
-        <span class="line"><span data-line>Seen something</span></span>
-        <span class="line"><span data-line><em>you'd live in?</em></span></span>
-      </h2>
-      <div class="commission-actions" data-reveal>
-        <a class="commission-cta magnetic" data-mailto data-cursor="Enquire" href="#">Commission a piece</a>
-        <a class="commission-email" data-mailto data-email-text data-cursor="Write" href="#">email</a>
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact" aria-label="Start a project">
+      <h2 class="contact-title">Have a site<br />worth building?</h2>
+      <div class="contact-actions">
+        <a class="btn btn--solid btn--lg" data-mailto href="#">Start a project</a>
+        <a class="contact-email" data-mailto data-email-text href="#">email</a>
       </div>
     </section>
 
   </main>
 
-  <!-- ================= THE CLOSING WALL ================= -->
-  <footer class="closing">
-    <div class="closing-map">
-      <nav class="closing-links" aria-label="Footer">
-        <a href="#collection">Collection</a>
-        <a href="#maker">The Maker</a>
-        <a href="#commission">Commission</a>
-      </nav>
-      <p class="closing-mark" aria-hidden="true">◆</p>
-      <p class="closing-legal">© <span data-year></span> <span data-owner>Suleiman Sallah</span> · A private gallery of built websites</p>
-    </div>
-    <p class="closing-name" aria-hidden="true">Suleiman&nbsp;Sallah</p>
+  <footer class="footer">
+    <p class="footer-mark">Suleiman Sallah<span class="wordmark-dot">.</span></p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-legal">&copy; <span data-year></span> <span data-owner>Suleiman Sallah</span></p>
   </footer>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
   <script defer src="js/works.js"></script>
   <script defer src="js/app.js"></script>
 </body>
