@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Aurora",
+    url: "https://aurora-hypercar.vercel.app/",
+    year: 2026,
+    medium: "All-electric hypercar marque",
+    image: "shots/aurora-hypercar.jpg",
+    ink: ["#e8e8e8", "#f26a1b"],
+  },
+  {
     title: "Étoile",
     url: "https://etoile-restaurant-tan.vercel.app/",
     year: 2026,
