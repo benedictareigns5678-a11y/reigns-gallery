@@ -28,24 +28,6 @@
   });
   text("[data-email-text]", GALLERY.email);
 
-  /* ---------- the featured piece: newest work ---------- */
-
-  var featured = WORKS[0];
-
-  if (featured) {
-    text("[data-featured-title]", featured.title);
-    text("[data-featured-date]", String(featured.year));
-
-    var fLink = document.querySelector("[data-featured-link]");
-    var fImg = document.querySelector("[data-featured-img]");
-
-    if (fLink) fLink.setAttribute("href", featured.url);
-    if (fImg && featured.image) {
-      fImg.setAttribute("src", featured.image);
-      fImg.setAttribute("alt", featured.title + " — " + featured.medium);
-    }
-  }
-
   /* ---------- the grid ---------- */
 
   var grid = document.querySelector("[data-grid]");
