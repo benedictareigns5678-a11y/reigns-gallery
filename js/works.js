@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Maison Sévrin",
+    url: "https://maison-sevrin.vercel.app/",
+    year: 2026,
+    medium: "Paris maison, the Rupture FW26 collection",
+    image: "shots/maison-sevrin.jpg",
+    ink: ["#f2f3f5", "#1b4bc4"],
+  },
+  {
     title: "Aurora",
     url: "https://aurora-hypercar.vercel.app/",
     year: 2026,
