@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Chroma",
+    url: "https://chroma-ss26.vercel.app/",
+    year: 2026,
+    medium: "SS26 campaign — four colourways, one silhouette",
+    image: "shots/chroma.jpg",
+    ink: ["#eef1f6", "#2258b0"],
+  },
+  {
     title: "Scooply",
     url: "https://scooply-nine.vercel.app/",
     year: 2026,
