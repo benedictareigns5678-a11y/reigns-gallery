@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Scooply",
+    url: "https://scooply-nine.vercel.app/",
+    year: 2026,
+    medium: "Small-batch ice cream, pints shipped frozen",
+    image: "shots/scooply.jpg",
+    ink: ["#fbf1e4", "#c85a22"],
+  },
+  {
     title: "Maison Sévrin",
     url: "https://maison-sevrin.vercel.app/",
     year: 2026,
