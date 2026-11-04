@@ -36,7 +36,7 @@ const WORKS = [
     title: "ASHEN",
     url: "https://ashen-roan.vercel.app/",
     year: 2026,
-    medium: "SS27 lookbook — six looks on a turning ring, shop every piece",
+    medium: "SS27 lookbook — six looks on a turning ring",
     image: "shots/ashen.jpg",
     ink: ["#f1f0ec", "#6b1e1b"],
   },
