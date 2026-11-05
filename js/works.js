@@ -33,6 +33,14 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "FERAL",
+    url: "https://feral-phi.vercel.app/",
+    year: 2026,
+    medium: "Wild botanical soda — one 3D can you scroll, spin and shop",
+    image: "shots/feral.jpg",
+    ink: ["#c2260e", "#f4e9d8"],
+  },
+  {
     title: "ASHEN",
     url: "https://ashen-roan.vercel.app/",
     year: 2026,
