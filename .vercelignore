@@ -1,0 +1,6 @@
+# Never upload local tooling or secrets to the website
+.claude
+.env*
+.git
+shots/*.png
+_qa.html

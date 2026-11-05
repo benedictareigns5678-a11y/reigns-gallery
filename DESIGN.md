@@ -1,41 +1,44 @@
-# DESIGN.md — "After Closing Time"
+# DESIGN.md — "Colour first"
 
-## Color tokens
-- `--wall`      #0E1512  deep viridian-black. Museum wall at night. Never flat black.
-- `--bone`      #EDE6D6  aged bone; all type on dark. Never pure white.
-- `--brass`     #C8A24B  gilt brass: frames, plaque rules, active states, keylines.
-- `--oxblood`   #6E1F26  velvet; room labels and rare emphasis only (<8% usage).
-- `--candle`    #E4C97E  signal gold: hover ignition, the cursor spotlight.
-- `--study`     #F2ECDF  the one lit room (The Maker). Ink on it: #141915.
-- Hairlines: brass at ~30% alpha. Grain/plaster texture at 2–3% over dark fields.
+## The idea
+Every site starts as a colour. Closed, a work is a band of its brand's own
+colour; open, it is the website. The gallery has no colour of its own:
+paper, ink and the brands' colours do all the work.
 
-## Typography
-- Display: Fraunces (variable, optical sizing on). Headings, work titles, room
-  names. Heroes 10–14vw, tracking -2%, Roman + Italic mixed inside one headline
-  ("Welcome to my website *collection.*" keeps that device).
-- Body: Hanken Grotesk, 17px/1.6.
-- Plaque: Space Mono, uppercase, 11–12px, tracked +10%. All metadata:
-  `No. 03 · EST. MMXXVI · MEDIUM: E-COMMERCE · STATUS: LIVE`.
-- Type is the lighting plan: bone type on dark walls reads as lit lettering.
+## Page
+1. **The colour wall (hero).** All works as bands in hue order (darker shades
+   lead), plus an 18th empty dashed band, "yours", which links to contact.
+   Hover, focus or scrub opens a band; the caption rides underneath. Phones and
+   tablets get a stage (the phone capture on phones) above a thumb-scrub strip.
+2. **Colour rooms (selected work).** One full-screen spread per `featured`
+   work. While a room holds the middle of the screen, the whole page takes on
+   that brand's colour, mixed 40% toward ink so the site stands off the wall.
+   Each room shows the desktop and phone captures, the story, what I made, and
+   a link.
+3. **The index.** Every site, grouped by `kind`. A colour chip on each row,
+   and a sticky window that sweeps in the colour, then the site. Phones and
+   tablets: a thumbnail in each row, no window.
+4. **About.** One person, from the first idea to the live site.
+5. **Contact, the 18th band opened.** Visitors move across the band to pick
+   their own colour (x = hue, y = light to deep); it goes into their email.
 
-## Motion
-- Lenis smooth scroll (lerp 0.09). House ease cubic-bezier(0.16,1,0.3,1).
-  Micro 0.35s, reveals 0.9s, field transitions 1.2s.
-- The cursor is the flashlight: soft candle radial (~350px, screen blend)
-  roams dark sections; tightens over a work; becomes a brass ring labelled
-  VIEW / ENQUIRE over links. Touch + reduced-motion: static ambient light.
-- Load sequence ≤1.6s: dark → name tracks in → gilt rule draws → hero staggers.
-- Reveals: line-masked headlines (70ms stagger), works scale 1.12→1 in frames.
-- Transform/opacity only. 60fps or the effect is cut.
+## Tokens
+- Paper `#f3f1ec`, ink `#161513`, soft ink `#6a675f`, line `#dcd8cf`,
+  strong line `#b4afa4`.
+- One typeface: Instrument Sans. Hierarchy by size and tone only, sentence
+  case, no full stops on headlines.
+- Links are plain underlines that wipe away on hover. No pill buttons.
 
-## Signature moments
-1. The flashlight cursor (the soul; first 3 seconds must cause the pause).
-2. The Collection: pinned horizontal promenade; vertical scroll walks the wall.
-   Works hang dimmed (85% brightness, slight desat) and wake on approach.
-3. The Maker: the page's one bone-lit room (animated color-field inversion).
-4. Footer: the owner's name at monument scale, cropped by the viewport bottom.
+## Motion rules (measured, keep them)
+- The wall slides bands with transforms only (Web Animations, quart-out
+  `linear()` curve). Never animate width, flex or layout.
+- Room colour = two fixed layers crossfaded by opacity, never a repaint.
+- Pointer input is folded into one update per frame. Hover targets come from
+  settled geometry, never from the moving DOM.
+- Native scrolling (no smooth-scroll library). Reduced motion turns it all off.
+- Hover rules use `any-hover`, because the owner's laptop is a touchscreen.
 
 ## Bans
-Purple/indigo gradients, glassmorphism, emoji icons, Inter as display,
-raw naked screenshots, equal card grids, drop-shadow depth (light does depth),
-em dashes in copy, #000/#fff.
+Giant condensed headlines with full stops, mono all-caps micro labels,
+01/02 numbered lists, pill buttons, italic-serif accent words, equal card
+grids, purple gradients, glassmorphism, emoji, #000/#fff.

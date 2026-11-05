@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suleiman Sallah — Website Portfolio</title>
   <meta name="description" content="A portfolio of live websites designed and built by Suleiman Sallah. Browse the work and open any site in its own tab." />
+  <meta name="theme-color" content="#f3f1ec" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://reigns-gallery.vercel.app/" />
   <meta property="og:title" content="Suleiman Sallah — Website Portfolio" />
-  <meta property="og:description" content="16 live brand websites for fashion, beauty, food &amp; drink and luxury brands, designed and built by Suleiman Sallah." />
+  <meta property="og:description" content="17 live brand websites for fashion, beauty, food &amp; drink and luxury brands, designed and built by Suleiman Sallah." />
   <meta property="og:image" content="https://reigns-gallery.vercel.app/shots/ashen.jpg" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="1000" />
@@ -16,88 +17,154 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23222'/><text x='50' y='72' font-size='68' font-family='Arial' font-weight='bold' fill='%23fff' text-anchor='middle'>S</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161513'/><text x='50' y='72' font-size='68' font-family='Arial' font-weight='bold' fill='%23f3f1ec' text-anchor='middle'>S</text></svg>" />
 </head>
 <body>
 
-  <a class="skip" href="#work">Skip to the work</a>
+  <a class="skip" href="#wall">Skip to the work</a>
 
   <!-- ===================== TOP BAR ===================== -->
   <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="Suleiman Sallah, home">
-      Suleiman Sallah<span class="wordmark-dot">.</span>
-    </a>
-
+    <a class="wordmark" href="#top">Suleiman Sallah</a>
     <nav class="topnav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a class="topnav-quiet" href="#work">Work</a>
+      <a class="topnav-quiet" href="#about">About</a>
+      <a class="topnav-cta" href="#contact">Start a project</a>
     </nav>
-
-    <div class="topbar-actions">
-      <span class="status" aria-label="Availability">
-        <span class="status-dot" aria-hidden="true"></span>Available for work
-      </span>
-      <a class="btn btn--solid" href="#contact">Start a project</a>
-    </div>
   </header>
 
   <main id="top">
 
-    <!-- ===================== THE GRID ===================== -->
-    <section class="collection" id="work" aria-label="All work">
-      <div class="collection-head">
-        <h1 class="collection-title">All Work</h1>
-        <p class="collection-count"><b data-count>12</b> sites &middot; every one live</p>
+    <!-- ===================== HERO: THE COLOUR WALL =====================
+         Closed, every work is a band of its brand's own colour.
+         Open, it is the website. The last band is empty: it's the
+         visitor's. Built by app.js from js/works.js. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <h1 class="hero-title" id="hero-title">I design and build websites for brands</h1>
+        <p class="hero-note">
+          <b>Art direction, motion and code by one person.</b>
+          <span data-count-words>Seventeen</span> sites so far, every one of them live.
+          <span class="hint hint--fine">Move across the colours to look through them.</span>
+          <span class="hint hint--touch">Slide along the colours to look through them.</span>
+        </p>
       </div>
 
-      <div class="grid" data-grid>
-        <!-- cards rendered by app.js -->
-      </div>
-
-      <p class="grid-empty" data-empty hidden>No sites published yet.</p>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="about" id="about" aria-label="About">
-      <p class="section-tag">About</p>
-      <div class="about-body">
-        <h2 class="about-title">
-          I design and build websites end to end, from first sketch to live deployment.
-        </h2>
-        <div class="about-side">
-          <p>
-            Every site in this portfolio was made by one pair of hands: the
-            layout, the type, the motion, the code, the deploy. No templates.
-          </p>
-          <dl class="facts">
-            <div class="fact"><dt>Sites shipped</dt><dd data-count>11</dd></div>
-            <div class="fact"><dt>Based</dt><dd>Remote, worldwide</dd></div>
-            <div class="fact"><dt>Availability</dt><dd>Open for 2026</dd></div>
-          </dl>
+      <div class="wall" id="wall" data-wall>
+        <a class="wall-stage" data-stage href="#" target="_blank" rel="noopener">
+          <img class="stage-img" alt="" decoding="async" />
+          <img class="stage-img" alt="" decoding="async" />
+          <span class="stage-yours" aria-hidden="true">
+            <span>Your brand, next on the wall</span>
+          </span>
+        </a>
+        <div class="wall-bands" data-bands role="group" aria-label="Every site, ordered by its brand colour"></div>
+        <div class="wall-cap" data-cap aria-live="polite">
+          <div class="cap-inner">
+            <p class="cap-text"><b class="cap-name" data-cap-name></b> <span class="cap-medium" data-cap-medium></span></p>
+            <a class="cap-link" data-cap-link href="#" target="_blank" rel="noopener">Open the live site <span aria-hidden="true">&#8599;</span></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
-    <section class="contact" id="contact" aria-label="Start a project">
-      <h2 class="contact-title">Have a site<br />worth building?</h2>
-      <div class="contact-actions">
-        <a class="btn btn--solid btn--lg" data-mailto href="#">Start a project</a>
-        <a class="contact-email" data-mailto data-email-text href="#">email</a>
+    <!-- ===================== SELECTED WORK: COLOUR ROOMS =====================
+         One spread per featured work. As each comes into view the whole
+         page takes on that brand's colour. Built by app.js. -->
+    <section class="rooms" id="selected" aria-label="Selected work" data-rooms></section>
+    <div class="room-light" aria-hidden="true"><i></i><i></i></div>
+
+    <!-- ===================== THE INDEX: EVERY SITE, BY KIND =====================
+         Each row's colour chip is the closed site; the window beside the
+         list opens it. Built by app.js from js/works.js. -->
+    <section class="index" id="work" aria-labelledby="index-title">
+      <div class="index-head">
+        <h2 class="index-title" id="index-title">Every site, by the kind of brand</h2>
+        <p class="index-note"><span data-count-words>Seventeen</span> sites in <span data-kind-count>four</span> kinds. Each one opens live in a new tab.</p>
+      </div>
+      <div class="index-body">
+        <div class="index-list" data-index></div>
+        <div class="index-window" aria-hidden="true" data-window>
+          <div class="window-frame">
+            <span class="window-pane"><img alt="" decoding="async" /></span>
+            <span class="window-pane"><img alt="" decoding="async" /></span>
+          </div>
+          <p class="window-cap"><b data-window-name></b> <span data-window-kind></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 class="about-title" id="about-title">One person, from the first idea to the live site</h2>
+      <div class="about-words">
+        <p>
+          I set the art direction, design every screen, write the motion and
+          the code, and put the site live. You talk to the person doing the
+          work the whole way through, so nothing gets lost between a designer
+          and a developer.
+        </p>
+        <p>
+          Every site starts with one idea the whole page is built around: a can
+          you can spin, six looks on a turning ring, a wall of colour. That idea
+          is what people remember about a brand.
+        </p>
+      </div>
+      <div class="about-side">
+        <div class="about-block">
+          <h3>What I make</h3>
+          <p>Launch sites for new brands</p>
+          <p>Product and campaign pages</p>
+          <p>Lookbooks and online shops</p>
+          <p>Redesigns for brands whose site undersells them</p>
+        </div>
+        <div class="about-block">
+          <h3>How it starts</h3>
+          <p class="about-how">
+            Send me a few lines about your brand and a website you wish was
+            yours. I'll reply with how I would approach it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT: THE 18TH BAND =====================
+         The empty band from the top of the page, opened. Moving across it
+         picks the visitor's own colour, which goes into their email. -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="yours" data-yours tabindex="0" role="slider"
+           aria-label="Choose your brand colour" aria-valuemin="0" aria-valuemax="359" aria-valuenow="0"
+           aria-valuetext="No colour chosen yet">
+        <h2 class="yours-title" id="contact-title">Your brand, next on the wall</h2>
+        <div class="yours-foot">
+          <p class="yours-hint">
+            <span class="hint hint--fine">Every site here began as a colour. Move across this one to choose yours.</span>
+            <span class="hint hint--touch">Every site here began as a colour. Slide across this one to choose yours.</span>
+          </p>
+          <p class="yours-chosen" data-yours-chosen aria-hidden="true"></p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <a class="contact-cta u-link" data-mailto data-yours-cta href="#">Start a project <span aria-hidden="true">&#8599;</span></a>
+        <p class="contact-mail">
+          <a class="u-link" data-mailto data-email-text href="#">email</a>
+          <button class="contact-copy" type="button" data-copy>Copy</button>
+        </p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p class="footer-mark">Suleiman Sallah<span class="wordmark-dot">.</span></p>
+    <p class="footer-mark">Suleiman Sallah</p>
+    <p class="footer-line">Every site on this page was designed and built by me, and every one is live.</p>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Start a project</a>
+      <a href="#top">Back to top</a>
     </nav>
     <p class="footer-legal">&copy; <span data-year></span> <span data-owner>Suleiman Sallah</span></p>
   </footer>
