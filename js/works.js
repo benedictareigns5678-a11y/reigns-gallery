@@ -41,6 +41,20 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "HUMWELL",
+    url: "https://humwell.vercel.app/",
+    year: 2026,
+    medium: "Independent record label, eight sleeves on a snaking spiral",
+    image: "shots/humwell.jpg",
+    mobile: "shots/m/humwell.webp",
+    colour: "#0e3a3d",
+    kind: "Music and culture",
+    featured: true,
+    story: "A concept record label from Lisbon. Its eight sleeves snake along a 3D spiral as you scroll; open one and it flies flat into its own page, and the whole site takes on that record's colours. Turn the sound on and the spiral becomes a turntable you can scratch.",
+    made: "The label and its eight releases, art direction for every sleeve, the WebGL spiral, the colour rooms, the turntable sound, the build",
+    ink: ["#0e3a3d", "#6fd3c4"],
+  },
+  {
     title: "FERAL",
     url: "https://feral-phi.vercel.app/",
     year: 2026,
