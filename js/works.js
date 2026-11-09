@@ -41,6 +41,20 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "OBRA",
+    url: "https://obra-studio.vercel.app/",
+    year: 2026,
+    medium: "Brand and type studio, a molten hero that melts into a wall of work",
+    image: "shots/obra.jpg",
+    mobile: "shots/m/obra.webp",
+    colour: "#f4511e",
+    kind: "Studios and agencies",
+    featured: true,
+    story: "A concept design studio from Lisbon and Paris, art-directed as \"Hot Metal\": brands cast rather than drawn. The hero shrinks into one pill of a scrolling wall of work, the wall gathers into the studio's mark, and the giant headline swells toward your cursor.",
+    made: "The studio's identity and voice, the Hot Metal art direction and image series, the scroll-driven hero, all eleven sections, the build",
+    ink: ["#f4511e", "#0b0b0a"],
+  },
+  {
     title: "HUMWELL",
     url: "https://humwell.vercel.app/",
     year: 2026,
