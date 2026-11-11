@@ -41,6 +41,20 @@ const GALLERY = {
 
 const WORKS = [
   {
+    title: "Naïade",
+    url: "https://naiade-ten.vercel.app/",
+    year: 2026,
+    medium: "Hydration skincare house, glass droplets and butterflies on living skin",
+    image: "shots/naiade.jpg",
+    mobile: "shots/m/naiade.webp",
+    colour: "#adcecb",
+    kind: "Fashion and beauty",
+    featured: true,
+    story: "A concept skincare house built around one idea: skin that drinks. Two campaign faces trade places in the hero while glass droplets roll across their skin, magnify it, and butterflies land to drink from them. The serum's own aqua runs through every photograph, product and button, and the page moves as you scroll.",
+    made: "The brand and its Dew Hour art direction, a campaign of AI models and a three-product family, the droplet and butterfly hero, the shop and editorial sections, the scroll motion, the build",
+    ink: ["#adcecb", "#24615e"],
+  },
+  {
     title: "OBRA",
     url: "https://obra-studio.vercel.app/",
     year: 2026,
