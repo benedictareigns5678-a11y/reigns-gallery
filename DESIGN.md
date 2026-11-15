@@ -1,44 +1,44 @@
-# DESIGN.md — "Colour first"
+# DESIGN.md: the studio portfolio (since 2026-11-15)
+
+The previous "Colour first" gallery is kept at git tag `v1-colour-first`.
 
 ## The idea
-Every site starts as a colour. Closed, a work is a band of its brand's own
-colour; open, it is the website. The gallery has no colour of its own:
-paper, ink and the brands' colours do all the work.
+One person, lit by their work. The page is near-black with cream type. One
+brand colour (`--c`) at a time lights the portrait card, the glow, the second
+name line and the rooms. Whoever is on screen owns the light: the hero, the
+work carousel (the card in front) or the brand section.
 
 ## Page
-1. **The colour wall (hero).** All works as bands in hue order (darker shades
-   lead), plus an 18th empty dashed band, "yours", which links to contact.
-   Hover, focus or scrub opens a band; the caption rides underneath. Phones and
-   tablets get a stage (the phone capture on phones) above a thumb-scrub strip.
-2. **Colour rooms (selected work).** One full-screen spread per `featured`
-   work. While a room holds the middle of the screen, the whole page takes on
-   that brand's colour, mixed 40% toward ink so the site stands off the wall.
-   Each room shows the desktop and phone captures, the story, what I made, and
-   a link.
-3. **The index.** Every site, grouped by `kind`. A colour chip on each row,
-   and a sticky window that sweeps in the colour, then the site. Phones and
-   tablets: a thumbnail in each row, no window.
-4. **About.** One person, from the first idea to the live site.
-5. **Contact, the 18th band opened.** Visitors move across the band to pick
-   their own colour (x = hue, y = light to deep); it goes into their email.
+1. **Hero.** The portrait card with "SULEIMAN / SALLAH" across it. Drag
+   across it and the light moves through every work's colour. The name fits
+   the full width. On phones the 9:16 portrait fills the screen like a cover.
+2. **Info.** The portrait continues beside a spec table (services, sites
+   built, design + build, colours collected, availability).
+3. **Statement.** Words fill from grey to cream as you scroll, then two
+   short "Because" paragraphs.
+4. **Work: GALLERY.** A three.js curved glass carousel of every work in
+   `js/works.js`. Drag, flick, trackpad or arrow keys; it loops and snaps.
+   The room takes the colour of the card in front. Phones use the phone
+   screenshots as tall cards.
+5. **BRANDS.** A simple intro (title, one paragraph, button) above a grid of
+   5:4 brand cards, two per row. Hover tilts the photo off a coloured frame
+   and VIEW PROJECT stickers pop in. Each card opens `brand/<name>/`.
+6. **Start a project.** A big mailto link.
 
 ## Tokens
-- Paper `#f3f1ec`, ink `#161513`, soft ink `#6a675f`, line `#dcd8cf`,
-  strong line `#b4afa4`.
-- One typeface: Instrument Sans. Hierarchy by size and tone only, sentence
-  case, no full stops on headlines.
-- Links are plain underlines that wipe away on hover. No pill buttons.
+- Background `#0c0b0a`, ink `#ece6dc`, mute 50% ink, rules 16% ink.
+- Type: Hanken Grotesk (400/500). **Signature: every capital A in display
+  type, and in the name, is an Instrument Serif italic A.**
+- Labels are 12px uppercase 500.
 
-## Motion rules (measured, keep them)
-- The wall slides bands with transforms only (Web Animations, quart-out
-  `linear()` curve). Never animate width, flex or layout.
-- Room colour = two fixed layers crossfaded by opacity, never a repaint.
-- Pointer input is folded into one update per frame. Hover targets come from
-  settled geometry, never from the moving DOM.
-- Native scrolling (no smooth-scroll library). Reduced motion turns it all off.
+## Motion rules (keep them)
+- One colour property (`--c`, registered with `@property`) transitions;
+  nothing repaints layout.
+- The carousel renders only while it's near the screen. Pointer input is
+  smoothed into one update per frame. Native scrolling.
+- Reduced motion turns off intros, inertia and reveals.
 - Hover rules use `any-hover`, because the owner's laptop is a touchscreen.
 
-## Bans
-Giant condensed headlines with full stops, mono all-caps micro labels,
-01/02 numbered lists, pill buttons, italic-serif accent words, equal card
-grids, purple gradients, glassmorphism, emoji, #000/#fff.
+## Brand case studies
+`brand/gelee/` stacks the 22 GELÉE boards in six chapters. From the next brand
+on, case studies are wide 16:9 brand-world frames (see the owner's notes).

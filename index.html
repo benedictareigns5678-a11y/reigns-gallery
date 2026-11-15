@@ -1,175 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suleiman Sallah — Website Portfolio</title>
-  <meta name="description" content="A portfolio of live websites designed and built by Suleiman Sallah. Browse the work and open any site in its own tab." />
-  <meta name="theme-color" content="#f3f1ec" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://reigns-gallery.vercel.app/" />
-  <meta property="og:title" content="Suleiman Sallah — Website Portfolio" />
-  <meta property="og:description" content="18 live brand websites for fashion, beauty, food &amp; drink, music and luxury brands, designed and built by Suleiman Sallah." />
-  <meta property="og:image" content="https://reigns-gallery.vercel.app/shots/ashen.jpg" />
-  <meta property="og:image:width" content="1600" />
-  <meta property="og:image:height" content="1000" />
-  <meta property="og:image:alt" content="ASHEN — a fashion lookbook with six looks on a turning ring" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161513'/><text x='50' y='72' font-size='68' font-family='Arial' font-weight='bold' fill='%23f3f1ec' text-anchor='middle'>S</text></svg>" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suleiman Sallah — brand and web design</title>
+<meta name="description" content="Suleiman Sallah designs brands and builds the websites that sell them: brand identity, social media identity and websites for DTC founders.">
+<meta name="theme-color" content="#0c0b0a">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reigns-gallery.vercel.app/">
+<meta property="og:title" content="Suleiman Sallah — brand and web design">
+<meta property="og:description" content="I design brands and build the websites that sell them. 20 websites and brand identities for DTC founders who want to be remembered.">
+<meta property="og:image" content="https://reigns-gallery.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b0a'/><text x='50' y='74' font-size='76' font-family='Georgia' font-style='italic' fill='%23ece6dc' text-anchor='middle'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/portrait.webp">
+<link rel="stylesheet" href="css/site.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }</script>
 </head>
 <body>
 
-  <a class="skip" href="#wall">Skip to the work</a>
+<!-- 1 · HERO -->
+<section class="hero" id="hero" aria-label="Suleiman Sallah, brand and web designer">
+  <div class="glow"></div>
+  <div class="card"><img src="img/portrait.webp" srcset="img/portrait-sm.webp 563w, img/portrait.webp 1125w" sizes="(max-width:767px) 100vw, 34vw" alt="Portrait of Suleiman Sallah"></div>
+  <div class="top lab fade"><span>Suleim<span class="a">a</span>n S<span class="a">a</span>ll<span class="a">a</span>h</span><span>Portfolio 2026</span></div>
+  <div class="mid fade">
+    <span class="lab">Brand + web design<span class="hint">Drag across me. The light follows the work.</span></span>
+    <p><span class="dot"></span>I design brands and build the websites that sell them. For DTC founders who want to be remembered.</p>
+  </div>
+  <div class="rule"></div>
+  <h1 class="name" aria-label="Suleiman Sallah">
+    <span class="l l1"><span>SULEIM<span class="a">A</span>N</span></span>
+    <span class="l l2"><span>S<span class="a">A</span>LL<span class="a">A</span>H</span></span>
+  </h1>
+</section>
 
-  <!-- ===================== TOP BAR ===================== -->
-  <header class="topbar">
-    <a class="wordmark" href="#top">Suleiman Sallah</a>
-    <nav class="topnav" aria-label="Main">
-      <a class="topnav-quiet" href="#work">Work</a>
-      <a class="topnav-quiet" href="#about">About</a>
-      <a class="topnav-cta" href="#contact">Start a project</a>
-    </nav>
-  </header>
+<!-- 2 · INFO -->
+<section class="info" id="about">
+  <span class="lab about">About</span>
+  <div class="spec lab">
+    <div class="row"><span>Services</span><span>Brand identity, websites<br>&amp; launch campaigns</span></div>
+    <div class="row"><span>Websites built</span><span id="countSites">20</span></div>
+    <div class="row"><span>I design + I build</span><span>No handoff, no lost details</span></div>
+    <div class="row"><span>Colours collected</span><span id="countColours">20</span></div>
+    <div class="row"><span>Availability</span><span>Open for new projects</span></div>
+    <a class="btn" href="#work"><i></i>View work</a>
+  </div>
+</section>
 
-  <main id="top">
+<!-- 3 · STATEMENT -->
+<section class="statement" aria-label="What I do">
+  <h2 class="big" id="big">I design brands and build the websites that sell them</h2>
+  <div class="because">
+    <span class="lab">Because</span>
+    <p>I take a brand from the first idea to its identity, its campaign imagery and the website that sells it. I build that website myself, so nothing gets lost between the design and the launch.</p>
+    <p>Every site in this gallery is a concept brand I designed, art-directed and built from scratch. Each one has its own colour. Drag through them below and the room takes it.</p>
+  </div>
+</section>
 
-    <!-- ===================== HERO: THE COLOUR WALL =====================
-         Closed, every work is a band of its brand's own colour.
-         Open, it is the website. The last band is empty: it's the
-         visitor's. Built by app.js from js/works.js. -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-intro">
-        <h1 class="hero-title" id="hero-title">I design and build websites for brands</h1>
-        <p class="hero-note">
-          <b>Art direction, motion and code by one person.</b>
-          <span data-count-words>Seventeen</span> sites so far, every one of them live.
-          <span class="hint hint--fine">Move across the colours to look through them.</span>
-          <span class="hint hint--touch">Slide along the colours to look through them.</span>
-        </p>
-      </div>
+<!-- 4 · WORK -->
+<section class="work" id="work" aria-label="Work">
+  <div class="work-head">
+    <span class="lab">What you came for</span>
+    <div class="display" aria-hidden="true">G<span class="a">A</span>LLERY</div>
+  </div>
+  <div class="stage" id="stage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Websites. Drag, or use the arrow keys. Press Enter to open the site."></div>
+  <div class="meta" aria-live="polite">
+    <div class="t" id="wTitle">&nbsp;</div>
+    <div class="m lab" id="wKind">&nbsp;</div>
+    <div class="count lab"><span id="wCount">01/20</span><a class="open" id="wOpen" href="#" target="_blank" rel="noopener">Open site ↗</a></div>
+  </div>
+  <ul class="sr" id="workList"></ul>
+</section>
 
-      <div class="wall" id="wall" data-wall>
-        <a class="wall-stage" data-stage href="#" target="_blank" rel="noopener">
-          <img class="stage-img" alt="" decoding="async" />
-          <img class="stage-img" alt="" decoding="async" />
-          <span class="stage-yours" aria-hidden="true">
-            <span>Your brand, next on the wall</span>
-          </span>
-        </a>
-        <div class="wall-bands" data-bands role="group" aria-label="Every site, ordered by its brand colour"></div>
-        <div class="wall-cap" data-cap aria-live="polite">
-          <div class="cap-inner">
-            <p class="cap-text"><b class="cap-name" data-cap-name></b> <span class="cap-medium" data-cap-medium></span></p>
-            <a class="cap-link" data-cap-link href="#" target="_blank" rel="noopener">Open the live site <span aria-hidden="true">&#8599;</span></a>
-          </div>
+<!-- 5 · BRAND IDENTITY -->
+<section class="brands" id="brands" aria-label="Brand identity">
+  <div class="b-head">
+    <div>
+      <span class="lab">Brand identity · Social media identity</span>
+      <h2 class="bdisplay">BR<span class="a">A</span>NDS</h2>
+    </div>
+    <div class="b-copy">
+      <p class="bintro">A brand is the reason someone picks you over the cheaper option. I build the whole thing, from the idea and the name to the identity, packaging, campaign and social look, so you launch looking established from day one.</p>
+      <a class="btn" href="#bgrid"><i></i>See the brands ↓</a>
+    </div>
+  </div>
+  <div class="bgrid" id="bgrid">
+    <a class="bcard" href="brand/gelee/" data-colour="#ff7eb6" data-name="GELÉE" style="--back:#ffc6de" aria-label="View project: GELÉE, brand identity">
+      <div class="bimg">
+        <div class="bpic">
+          <img src="brand/gelee/thumb/key-900.webp" srcset="brand/gelee/thumb/key-900.webp 900w, brand/gelee/thumb/key-1500.webp 1500w" sizes="(max-width:767px) 100vw, 48vw" alt="GELÉE key visual: the morning after, glowing anyway" loading="lazy" width="1500" height="1200">
+          <img class="bmark" src="brand/gelee/thumb/wordmark.svg" alt="" aria-hidden="true">
         </div>
+        <span class="vp" aria-hidden="true" style="--x:28%;--y:21%;--r:-5deg;--d:0ms">VIEW PROJECT</span>
+        <span class="vp" aria-hidden="true" style="--x:75%;--y:25%;--r:13deg;--d:60ms">VIEW PROJECT</span>
+        <span class="vp" aria-hidden="true" style="--x:50%;--y:50%;--r:3deg;--d:120ms">VIEW PROJECT</span>
+        <span class="vp" aria-hidden="true" style="--x:26%;--y:77%;--r:-3deg;--d:180ms">VIEW PROJECT</span>
+        <span class="vp" aria-hidden="true" style="--x:73%;--y:79%;--r:11deg;--d:240ms">VIEW PROJECT</span>
       </div>
-    </section>
+      <div class="bmeta"><span class="bt">GELÉE</span><span class="btags"><span>Branding</span><span>Packaging</span><span>Social media</span></span></div>
+    </a>
+  </div>
+</section>
 
-    <!-- ===================== SELECTED WORK: COLOUR ROOMS =====================
-         One spread per featured work. As each comes into view the whole
-         page takes on that brand's colour. Built by app.js. -->
-    <section class="rooms" id="selected" aria-label="Selected work" data-rooms></section>
-    <div class="room-light" aria-hidden="true"><i></i><i></i></div>
+<footer class="end">
+  <span class="lab">Have a brand that should be remembered?</span>
+  <a class="endlink" id="mail" href="#">St<span class="a">a</span>rt <span class="a">a</span> project ↗</a>
+</footer>
 
-    <!-- ===================== THE INDEX: EVERY SITE, BY KIND =====================
-         Each row's colour chip is the closed site; the window beside the
-         list opens it. Built by app.js from js/works.js. -->
-    <section class="index" id="work" aria-labelledby="index-title">
-      <div class="index-head">
-        <h2 class="index-title" id="index-title">Every site, by the kind of brand</h2>
-        <p class="index-note"><span data-count-words>Seventeen</span> sites in <span data-kind-count>four</span> kinds. Each one opens live in a new tab.</p>
-      </div>
-      <div class="index-body">
-        <div class="index-list" data-index></div>
-        <div class="index-window" aria-hidden="true" data-window>
-          <div class="window-frame">
-            <span class="window-pane"><img alt="" decoding="async" /></span>
-            <span class="window-pane"><img alt="" decoding="async" /></span>
-          </div>
-          <p class="window-cap"><b data-window-name></b> <span data-window-kind></span></p>
-        </div>
-      </div>
-    </section>
+<div class="ui fade">
+  <div class="lit" aria-live="polite"><i></i><span>Lit by <b id="litName">the studio</b></span><span class="n" id="litN"></span></div>
+  <div class="menu lab"><i></i>Menu</div>
+</div>
 
-    <!-- ===================== ABOUT ===================== -->
-    <section class="about" id="about" aria-labelledby="about-title">
-      <h2 class="about-title" id="about-title">One person, from the first idea to the live site</h2>
-      <div class="about-words">
-        <p>
-          I set the art direction, design every screen, write the motion and
-          the code, and put the site live. You talk to the person doing the
-          work the whole way through, so nothing gets lost between a designer
-          and a developer.
-        </p>
-        <p>
-          Every site starts with one idea the whole page is built around: a can
-          you can spin, six looks on a turning ring, a wall of colour. That idea
-          is what people remember about a brand.
-        </p>
-      </div>
-      <div class="about-side">
-        <div class="about-block">
-          <h3>What I make</h3>
-          <p>Launch sites for new brands</p>
-          <p>Product and campaign pages</p>
-          <p>Lookbooks and online shops</p>
-          <p>Redesigns for brands whose site undersells them</p>
-        </div>
-        <div class="about-block">
-          <h3>How it starts</h3>
-          <p class="about-how">
-            Send me a few lines about your brand and a website you wish was
-            yours. I'll reply with how I would approach it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT: THE 18TH BAND =====================
-         The empty band from the top of the page, opened. Moving across it
-         picks the visitor's own colour, which goes into their email. -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="yours" data-yours tabindex="0" role="slider"
-           aria-label="Choose your brand colour" aria-valuemin="0" aria-valuemax="359" aria-valuenow="0"
-           aria-valuetext="No colour chosen yet">
-        <h2 class="yours-title" id="contact-title">Your brand, next on the wall</h2>
-        <div class="yours-foot">
-          <p class="yours-hint">
-            <span class="hint hint--fine">Every site here began as a colour. Move across this one to choose yours.</span>
-            <span class="hint hint--touch">Every site here began as a colour. Slide across this one to choose yours.</span>
-          </p>
-          <p class="yours-chosen" data-yours-chosen aria-hidden="true"></p>
-        </div>
-      </div>
-      <div class="contact-row">
-        <a class="contact-cta u-link" data-mailto data-yours-cta href="#">Start a project <span aria-hidden="true">&#8599;</span></a>
-        <p class="contact-mail">
-          <a class="u-link" data-mailto data-email-text href="#">email</a>
-          <button class="contact-copy" type="button" data-copy>Copy</button>
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <p class="footer-mark">Suleiman Sallah</p>
-    <p class="footer-line">Every site on this page was designed and built by me, and every one is live.</p>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Start a project</a>
-      <a href="#top">Back to top</a>
-    </nav>
-    <p class="footer-legal">&copy; <span data-year></span> <span data-owner>Suleiman Sallah</span></p>
-  </footer>
-
-  <script defer src="js/works.js"></script>
-  <script defer src="js/app.js"></script>
+<script src="js/works.js"></script>
+<script src="js/light.js"></script>
+<script type="module" src="js/work.js"></script>
+<script src="js/brands.js"></script>
 </body>
 </html>

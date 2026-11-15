@@ -1,13 +1,13 @@
-# Suleiman Sallah — Website Portfolio
+# Suleiman Sallah — brand and web design
 
-A portfolio of live websites. Every work opens the real site in a new tab.
+A studio portfolio: the websites (a curved drag carousel) and the brand
+identities (case-study pages). Every website opens the real site in a new tab.
 
 Live at <https://reigns-gallery.vercel.app>
 
-The page: a wall of brand colours (hover to open each site), full-screen
-colour rooms for the featured work, an index of every site by kind of brand,
-an about section, and a contact band where visitors pick their own colour.
-See `DESIGN.md`.
+The page: a portrait hero lit by each work's colour, an info sheet, a
+statement, the GALLERY carousel of every site, the BRANDS grid, and a
+contact link. See `DESIGN.md`.
 
 ---
 
@@ -15,7 +15,7 @@ See `DESIGN.md`.
 
 ### Add one of your websites
 Copy this block and paste it at the **top** of the `WORKS` list. The work at
-the top is the one open on the colour wall when the page loads.
+the top is the first card in the carousel.
 
 ```js
 {
@@ -41,8 +41,13 @@ three sentences) and `made` (what you made).
   of it (the page uses these).
 - `shots/m/name.webp`: the phone screenshot.
 
-The colour wall sorts itself by `colour`, and the index groups by `kind`. The
-counts in the copy update by themselves.
+The carousel and the hero light pick up every work by themselves, and the
+counts in the info sheet update by themselves.
+
+### Add a brand identity
+Make `brand/<name>/` (copy `brand/gelee/`), then add a card to the
+`bgrid` in `index.html`: a 5:4 thumbnail, the `--back` frame colour, and
+`data-colour` / `data-name` for the light.
 
 ---
 
