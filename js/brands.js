@@ -8,6 +8,7 @@
   const mail = document.getElementById('mail');
   mail.href = 'mailto:' + GALLERY.email + '?subject=' + encodeURIComponent('A new project');
   const ml = document.getElementById('mailline'); ml.href = 'mailto:' + GALLERY.email; ml.textContent = GALLERY.email;
+  const tm = document.getElementById('topmail'); tm.href = 'mailto:' + GALLERY.email + '?subject=' + encodeURIComponent('A new project'); tm.textContent = GALLERY.email;
   // branding rows rise in as they arrive
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const rows = document.querySelectorAll('.svc');
