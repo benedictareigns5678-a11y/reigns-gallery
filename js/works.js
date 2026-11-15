@@ -14,7 +14,7 @@ const GALLERY = {
   name: "Suleiman Sallah",
   tagline: "Portfolio — a collection of built websites",
   owner: "Suleiman Sallah",
-  email: "benedictareigns5678@gmail.com",
+  email: "suleimansallah4@gmail.com",
   established: "MMXXVI",
 };
 

@@ -68,6 +68,7 @@
 <section class="cs-end">
   <span class="lab">Have a brand that should be remembered?</span>
   <a class="endlink" id="mail" href="#">St<span class="a">a</span>rt <span class="a">a</span> project ↗</a>
+  <a class="mailline" id="mailline" href="mailto:suleimansallah4@gmail.com">suleimansallah4@gmail.com</a>
   <p class="note">More brand identities are on their way to this room. Until then, the websites are in the gallery.</p>
   <a class="back lab" href="../../#work"><span>←</span><span>B<span class="a">a</span>ck to the g<span class="a">a</span>llery</span></a>
 </section>
@@ -90,6 +91,7 @@ document.getElementById('chapters').innerHTML = CHAPTERS.map(([title, line, boar
       `<img src="img/${f}-1200.webp" srcset="img/${f}-1200.webp 1200w, img/${f}-2000.webp 2000w" sizes="(max-width:767px) 100vw, 72vw" alt="${alt}" ${k === 0 && j === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} width="1200" height="900">`).join('')}</div>
   </section>`).join('');
 document.getElementById('mail').href = 'mailto:' + GALLERY.email + '?subject=' + encodeURIComponent('A new brand project');
+const ml = document.getElementById('mailline'); ml.href = 'mailto:' + GALLERY.email; ml.textContent = GALLERY.email;
 </script>
 </body>
 </html>
